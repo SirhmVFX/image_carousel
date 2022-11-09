@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Image Carousel</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <img src="./images/pexels-filipe-de-azevedo-2083740.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pexels-frans-van-heerden-624015.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pexels-luis-del-río-15286.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pexels-lumn-167699.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pexels-pixabay-147411.jpg" alt="" />
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/pexels-stein-egil-liland-3408744.jpg" alt="" />
+          </div>
+          ...
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+  </body>
+</html>
